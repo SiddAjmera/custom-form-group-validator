@@ -1,0 +1,14 @@
+<form [formGroup]="myForm" (ngSubmit)="submit(myForm.value)">
+	<mat-form-field class="full-width" appearance="outline">
+		<input matInput type="text" formControlName="uName" placeholder="UName">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="outline">
+    <input matInput type="text" formControlName="username" placeholder="Username">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="outline">
+    <input matInput type="text" formControlName="description" placeholder="Description">
+  </mat-form-field>
+  <button mat-raised-button type="submit" [disabled]="!myForm.valid">Submit</button>
+</form>
